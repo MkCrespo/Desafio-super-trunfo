@@ -9,6 +9,8 @@ int main(){
     float area;
     float pib;
     int numerodepontosturisticos;
+    float densidadepopulacional;
+    float pibpercapita;
 
     // Atributos da segunda carta
     char estado2;
@@ -18,6 +20,8 @@ int main(){
     float area2;
     float pib2;
     int numerodepontosturisticos2;
+    float densidadepopulacional2;
+    float pibpercapita2;
 
     //Cadastro da primeira carta:
     printf("Digite o Estado: \n");
@@ -41,6 +45,11 @@ int main(){
     printf("Digito o número de pontos turísticos: \n");
     scanf("%d", &numerodepontosturisticos);
 
+    //Calculo da densidade populacional e PIB per capita da primeira carta
+
+    densidadepopulacional = (float)populacao / area;
+    pibpercapita = pib *1e9 / (float)populacao;
+
     //Cadastro da segunda carta:
     printf("\nDigite o Estado: \n");
     scanf(" %c", &estado2);
@@ -63,6 +72,11 @@ int main(){
     printf("Digito o número de pontos turísticos: \n");
     scanf("%d", &numerodepontosturisticos2);
 
+    //Calculo da densidade populacional e PIB per capita da segundo carta
+
+    densidadepopulacional2 = (float)populacao2 / area2;
+    pibpercapita2 = pib2 * 1e9 / (float)populacao2;
+
     //Exibindo os dados da primeira carta:
     printf("\n     Carta 1   \n");
     printf("Estado: %c \n", estado);
@@ -72,6 +86,9 @@ int main(){
     printf("Área: %.2f KM²\n", area);
     printf("PIB: %.2f Bilhões de reais\n", pib);
     printf("Número de pontos Turísticos: %d \n", numerodepontosturisticos);
+    printf("Densidade populacional: %.2f Hab/km²\n", densidadepopulacional);
+    printf("PIB per capita: %.2f reais\n",pibpercapita);
+    printf("\n");
 
     //Exibindo os dados da segunda carta:
     printf("\n     Carta 2    \n");
@@ -82,6 +99,8 @@ int main(){
     printf("Área: %.2f KM²\n", area2);
     printf("PIB: %.2f Bilhões de reais\n", pib2);
     printf("Número de pontos Turísticos: %d \n", numerodepontosturisticos2);
+    printf("Densidade populacional: %.2f Hab/km²\n", densidadepopulacional2);
+    printf("PIB per capita: %.2f reais\n",pibpercapita2);
 
     return 0;
 }
